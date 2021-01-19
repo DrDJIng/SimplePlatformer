@@ -2,8 +2,8 @@ extends KinematicBody2D
 
 var GRAVITY = 9.807 # Earth gravity
 export var SPEED = 550.0 # Horizontal movement speed
-export var FSCALE := 5.0 # How much faster we want our character to fall compared to normal gravity.
-export var LOW_JUMP_SCALE := 2.0 # This scale controls how fast the character falls after jumping.
+export var FALLSCALE := 5.0 # How much faster we want our character to fall compared to normal gravity.
+export var AFTER_JUMP_SCALE := 2.0 # This scale controls how fast the character falls after jumping.
 export var JUMP_SPEED := 300.0 # How much velocity is added for jumping.
 
 var velocity = Vector2() # Velocity. Speed with a direction. In this case, horizontal or vertical.
@@ -79,16 +79,16 @@ func _process(delta):
 
 func _physics_process(delta):
 	get_input(delta)
-	velocity.y += GRAVITY * FSCALE # Apply gravity
+	velocity.y += GRAVITY * FALLSCALE # Apply gravity
 	
-	if velocity.y > 0:
-		velocity += Vector2.UP * (-GRAVITY) * FSCALE # This makes me accelerate FSCALE faster than gravity would typically dictate.
-		if velocity.y < 1.5 * (-GRAVITY) * FSCALE:
-			velocity.y = 1.5 * (-GRAVITY) * FSCALE # This caps downward velocity at 2 * FSCALE * GRAVITY
+	if velocity.y > 0: # When falling
+		velocity += Vector2.UP * (-GRAVITY) * FALLSCALE # This makes me accelerate FALLSCALE faster than gravity would typically dictate.
+		if velocity.y < 1.5 * (-GRAVITY) * FALLSCALE:
+			velocity.y = 1.5 * (-GRAVITY) * FALLSCALE # This caps downward velocity at 2 * FALLSCALE * GRAVITY
 	elif velocity.y < 0 && Input.is_action_just_released("jump"):
-		velocity += Vector2.UP * (-GRAVITY) * LOW_JUMP_SCALE # This is falling after a jump. You'll notice that falling after a jump is faster than falling normally. This is because we want the player to have more control over their movement.
-		if velocity.y < 2 * (-GRAVITY) * LOW_JUMP_SCALE:
-			velocity.y = 2 * (-GRAVITY) * LOW_JUMP_SCALE # Still capped at 2 * FSCALE * GRAVITY, though.
+		velocity += Vector2.UP * (-GRAVITY) * AFTER_JUMP_SCALE # This is falling after a jump. You'll notice that falling after a jump is faster than falling normally. This is because we want the player to have more control over their movement.
+		if velocity.y < 2 * (-GRAVITY) * AFTER_JUMP_SCALE:
+			velocity.y = 2 * (-GRAVITY) * AFTER_JUMP_SCALE # Still capped at 2 * FALLSCALE * GRAVITY, though.
 	
 	if is_on_floor():
 		doubleJump = 0
@@ -104,6 +104,7 @@ func _physics_process(delta):
 	
 	
 	velocity = move_and_slide(velocity, Vector2(0, -1)) # Tell godot to move our character, and allow movement along other collision boxes.
+	# The Vector2(0, -1) sets the normals the character sees. This will allow us to use is_on_floor() correctly.
 
 
 func _on_Sprite_animation_finished():
