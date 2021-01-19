@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/One Man Symphony - Royalty Free Soundtrack Collection - 43 Rolling Screen Piano Theme.ogg-230cee1749538d7c87d575b96cb9b0f8.oggstr"
+
+[deps]
+
+source_file="res://One Man Symphony - Royalty Free Soundtrack Collection - 43 Rolling Screen Piano Theme.ogg"
+dest_files=[ "res://.import/One Man Symphony - Royalty Free Soundtrack Collection - 43 Rolling Screen Piano Theme.ogg-230cee1749538d7c87d575b96cb9b0f8.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

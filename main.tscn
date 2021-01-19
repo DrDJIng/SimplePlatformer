@@ -1,0 +1,135 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Town.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Character.tscn" type="PackedScene" id=2]
+[ext_resource path="res://main.gd" type="Script" id=3]
+[ext_resource path="res://Assets/Effects/spots.png" type="Texture" id=4]
+
+[sub_resource type="CanvasItemMaterial" id=1]
+blend_mode = 1
+particles_animation = true
+particles_anim_h_frames = 7
+particles_anim_v_frames = 7
+particles_anim_loop = false
+
+[sub_resource type="ParticlesMaterial" id=2]
+emission_shape = 1
+emission_sphere_radius = 44.85
+flag_disable_z = true
+gravity = Vector3( 0, -400, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+scale_random = 1.0
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 90.0323, 130.654 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 0.279297, 0.142625 )
+
+[node name="Game" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Map" parent="." instance=ExtResource( 1 )]
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Character" parent="." instance=ExtResource( 2 )]
+position = Vector2( 88, 2200 )
+
+[node name="DashPickup" type="Node2D" parent="."]
+
+[node name="PickUp" type="Node2D" parent="DashPickup"]
+
+[node name="PickUpText" type="MarginContainer" parent="DashPickup/PickUp"]
+visible = false
+margin_left = 933.197
+margin_top = -551.806
+margin_right = 1053.2
+margin_bottom = -531.806
+rect_scale = Vector2( 3, 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="DashPickup/PickUp/PickUpText"]
+margin_right = 120.0
+margin_bottom = 20.0
+text = "Press S to pick up."
+fit_content_height = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Particles2D" type="Particles2D" parent="DashPickup/PickUp"]
+material = SubResource( 1 )
+position = Vector2( 1095.06, -268.454 )
+process_material = SubResource( 2 )
+texture = ExtResource( 4 )
+
+[node name="Area2D" type="Area2D" parent="DashPickup/PickUp"]
+position = Vector2( 1093.2, -351.806 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DashPickup/PickUp/Area2D"]
+position = Vector2( 1.49866, 1.49835 )
+shape = SubResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="DashTutorial" type="MarginContainer" parent="DashPickup"]
+visible = false
+margin_left = 933.0
+margin_top = -552.0
+margin_right = 1069.0
+margin_bottom = -522.0
+rect_scale = Vector2( 3, 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="DashPickup/DashTutorial"]
+margin_right = 136.0
+margin_bottom = 30.0
+text = "You can now dash! 
+Press LShift to dash!"
+fit_content_height = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Double jump" type="Node2D" parent="."]
+position = Vector2( -2684.72, 2134.83 )
+
+[node name="DJTut" type="MarginContainer" parent="Double jump"]
+visible = false
+margin_left = 933.0
+margin_top = -552.0
+margin_right = 1069.0
+margin_bottom = -522.0
+rect_scale = Vector2( 3, 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Double jump/DJTut"]
+margin_right = 136.0
+margin_bottom = 30.0
+text = "You can jump twice!"
+fit_content_height = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="JumpTutArea" type="Area2D" parent="Double jump"]
+position = Vector2( -100, -100 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Double jump/JumpTutArea"]
+position = Vector2( 1222.5, -493.754 )
+scale = Vector2( 1000, 1000 )
+shape = SubResource( 4 )
+[connection signal="body_shape_entered" from="DashPickup/PickUp/Area2D" to="." method="_on_Area2D_body_shape_entered"]
+[connection signal="body_shape_exited" from="DashPickup/PickUp/Area2D" to="." method="_on_Area2D_body_shape_exited"]
+[connection signal="body_entered" from="Double jump/JumpTutArea" to="." method="_on_JumpTutArea_body_entered"]

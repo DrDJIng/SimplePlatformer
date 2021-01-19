@@ -1,0 +1,171 @@
+[gd_scene load_steps=100 format=2]
+
+[ext_resource path="res://Assets/Character/2BlueWizardJump/Dash2/DashBlue_00013.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Character/2BlueWizardJump/Dash2/DashBlue_00011.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Character/2BlueWizardJump/Dash3/Dash3_00007.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Character/2BlueWizardWalk/Chara_BlueWalk00013.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Character/2BlueWizardJump/Dash2/DashBlue_00012.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Character/2BlueWizardJump/Dash3/Dash3_00014.png" type="Texture" id=6]
+[ext_resource path="res://KinematicBody2D.gd" type="Script" id=7]
+[ext_resource path="res://Assets/Character/2BlueWizardWalk/Chara_BlueWalk00014.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Character/2BlueWizardWalk/Chara_BlueWalk00015.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Character/2BlueWizardWalk/Chara_BlueWalk00002.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Character/2BlueWizardWalk/Chara_BlueWalk00019.png" type="Texture" id=11]
+[ext_resource path="res://Assets/Character/2BlueWizardJump/Dash3/Dash3_00000.png" type="Texture" id=12]
+[ext_resource path="res://Assets/Character/2BlueWizardJump/Dash2/DashBlue_00002.png" type="Texture" id=13]
+[ext_resource path="res://Assets/Character/2BlueWizardJump/Dash2/DashBlue_00001.png" type="Texture" id=14]
+[ext_resource path="res://Assets/Character/2BlueWizardJump/Dash2/DashBlue_00007.png" type="Texture" id=15]
+[ext_resource path="res://Assets/Character/2BlueWizardJump/Dash2/DashBlue_00006.png" type="Texture" id=16]
+[ext_resource path="res://Assets/Character/2BlueWizardJump/Dash2/DashBlue_00009.png" type="Texture" id=17]
+[ext_resource path="res://Assets/Character/2BlueWizardJump/Dash3/Dash3_00011.png" type="Texture" id=18]
+[ext_resource path="res://Assets/Character/2BlueWizardJump/Dash3/Dash3_00015.png" type="Texture" id=19]
+[ext_resource path="res://Assets/Character/2BlueWizardWalk/Chara_BlueWalk00006.png" type="Texture" id=20]
+[ext_resource path="res://Assets/Character/2BlueWizardWalk/Chara_BlueWalk00001.png" type="Texture" id=21]
+[ext_resource path="res://Assets/Character/2BlueWizardWalk/Chara_BlueWalk00004.png" type="Texture" id=22]
+[ext_resource path="res://Assets/Character/2BlueWizardWalk/Chara_BlueWalk00007.png" type="Texture" id=23]
+[ext_resource path="res://Assets/Character/2BlueWizardWalk/Chara_BlueWalk00009.png" type="Texture" id=24]
+[ext_resource path="res://Assets/Character/2BlueWizardJump/Dash3/Dash3_00012.png" type="Texture" id=25]
+[ext_resource path="res://Assets/Character/2BlueWizardWalk/Chara_BlueWalk00003.png" type="Texture" id=26]
+[ext_resource path="res://Assets/Character/2BlueWizardWalk/Chara_BlueWalk00016.png" type="Texture" id=27]
+[ext_resource path="res://Assets/Character/2BlueWizardJump/Dash2/DashBlue_00008.png" type="Texture" id=28]
+[ext_resource path="res://Assets/Character/2BlueWizardJump/Dash2/DashBlue_00010.png" type="Texture" id=29]
+[ext_resource path="res://Assets/Character/2BlueWizardJump/Dash3/Dash3_00006.png" type="Texture" id=30]
+[ext_resource path="res://Assets/Character/2BlueWizardWalk/Chara_BlueWalk00017.png" type="Texture" id=31]
+[ext_resource path="res://Assets/Character/2BlueWizardJump/Dash2/DashBlue_00005.png" type="Texture" id=32]
+[ext_resource path="res://Assets/Character/2BlueWizardWalk/Chara_BlueWalk00018.png" type="Texture" id=33]
+[ext_resource path="res://Assets/Character/2BlueWizardWalk/Chara_BlueWalk00010.png" type="Texture" id=34]
+[ext_resource path="res://Assets/Character/2BlueWizardJump/Dash3/Dash3_00004.png" type="Texture" id=35]
+[ext_resource path="res://Assets/Character/2BlueWizardJump/Dash3/Dash3_00002.png" type="Texture" id=36]
+[ext_resource path="res://Assets/Character/2BlueWizardJump/Dash2/DashBlue_00004.png" type="Texture" id=37]
+[ext_resource path="res://Assets/Character/2BlueWizardJump/Dash2/DashBlue_00014.png" type="Texture" id=38]
+[ext_resource path="res://Assets/Character/2BlueWizardJump/Dash2/DashBlue_00015.png" type="Texture" id=39]
+[ext_resource path="res://Assets/Character/2BlueWizardJump/Dash3/Dash3_00009.png" type="Texture" id=40]
+[ext_resource path="res://Assets/Character/2BlueWizardWalk/Chara_BlueWalk00005.png" type="Texture" id=41]
+[ext_resource path="res://Assets/Character/2BlueWizardJump/Dash3/Dash3_00001.png" type="Texture" id=42]
+[ext_resource path="res://Assets/Character/2BlueWizardWalk/Chara_BlueWalk00012.png" type="Texture" id=43]
+[ext_resource path="res://Assets/Character/2BlueWizardJump/Dash3/Dash3_00010.png" type="Texture" id=44]
+[ext_resource path="res://Assets/Character/2BlueWizardWalk/Chara_BlueWalk00000.png" type="Texture" id=45]
+[ext_resource path="res://Assets/Character/2BlueWizardWalk/Chara_BlueWalk00011.png" type="Texture" id=46]
+[ext_resource path="res://Assets/Character/2BlueWizardJump/Dash3/Dash3_00003.png" type="Texture" id=47]
+[ext_resource path="res://Assets/Character/2BlueWizardJump/Dash3/Dash3_00005.png" type="Texture" id=48]
+[ext_resource path="res://Assets/Character/2BlueWizardJump/Dash3/Dash3_00008.png" type="Texture" id=49]
+[ext_resource path="res://Assets/Character/2BlueWizardJump/Dash3/Dash3_00013.png" type="Texture" id=50]
+[ext_resource path="res://Assets/Character/2BlueWizardJump/Dash2/DashBlue_00003.png" type="Texture" id=51]
+[ext_resource path="res://Assets/Character/2BlueWizardWalk/Chara_BlueWalk00008.png" type="Texture" id=52]
+[ext_resource path="res://Assets/Character/2BlueWizardJump/Dash2/DashBlue_00000.png" type="Texture" id=53]
+[ext_resource path="res://Assets/Character/2BlueWizardJump/DashEffect/BlueWizardDash_00010.png" type="Texture" id=54]
+[ext_resource path="res://Assets/Character/2BlueWizardJump/DashEffect/BlueWizardDash_00011.png" type="Texture" id=55]
+[ext_resource path="res://Assets/Character/2BlueWizardJump/DashEffect/BlueWizardDash_00012.png" type="Texture" id=56]
+[ext_resource path="res://Assets/Character/2BlueWizardJump/DashEffect/BlueWizardDash_00013.png" type="Texture" id=57]
+[ext_resource path="res://Assets/Character/2BlueWizardJump/DashEffect/BlueWizardDash_00014.png" type="Texture" id=58]
+[ext_resource path="res://Assets/Character/2BlueWizardJump/DashEffect/BlueWizardDash_00015.png" type="Texture" id=59]
+[ext_resource path="res://Assets/Character/2BlueWizardJump/DashEffect/BlueWizardDash_00008.png" type="Texture" id=60]
+[ext_resource path="res://Assets/Character/2BlueWizardJump/DashEffect/BlueWizardDash_00009.png" type="Texture" id=61]
+[ext_resource path="res://Assets/Character/2BlueWizardJump/DashEffect/BlueWizardDash_00004.png" type="Texture" id=62]
+[ext_resource path="res://Assets/Character/2BlueWizardJump/DashEffect/BlueWizardDash_00005.png" type="Texture" id=63]
+[ext_resource path="res://Assets/Character/2BlueWizardJump/DashEffect/BlueWizardDash_00006.png" type="Texture" id=64]
+[ext_resource path="res://Assets/Character/2BlueWizardJump/DashEffect/BlueWizardDash_00007.png" type="Texture" id=65]
+[ext_resource path="res://Assets/Character/2BlueWizardJump/CharaWizardJump_00002.png" type="Texture" id=66]
+[ext_resource path="res://Assets/Character/2BlueWizardJump/CharaWizardJump_00005.png" type="Texture" id=67]
+[ext_resource path="res://Assets/Character/2BlueWizardIdle/Chara - BlueIdle00006.png" type="Texture" id=68]
+[ext_resource path="res://Assets/Character/2BlueWizardIdle/Chara - BlueIdle00002.png" type="Texture" id=69]
+[ext_resource path="res://Assets/Character/2BlueWizardIdle/Chara - BlueIdle00004.png" type="Texture" id=70]
+[ext_resource path="res://Assets/Character/2BlueWizardIdle/Chara - BlueIdle00009.png" type="Texture" id=71]
+[ext_resource path="res://Assets/Character/2BlueWizardIdle/Chara - BlueIdle00008.png" type="Texture" id=72]
+[ext_resource path="res://Assets/Character/2BlueWizardIdle/Chara - BlueIdle00003.png" type="Texture" id=73]
+[ext_resource path="res://Assets/Character/2BlueWizardIdle/Chara - BlueIdle00011.png" type="Texture" id=74]
+[ext_resource path="res://Assets/Character/2BlueWizardIdle/Chara - BlueIdle00013.png" type="Texture" id=75]
+[ext_resource path="res://Assets/Character/2BlueWizardIdle/Chara - BlueIdle00017.png" type="Texture" id=76]
+[ext_resource path="res://Assets/Character/2BlueWizardIdle/Chara - BlueIdle00018.png" type="Texture" id=77]
+[ext_resource path="res://Assets/Character/2BlueWizardIdle/Chara - BlueIdle00019.png" type="Texture" id=78]
+[ext_resource path="res://Assets/Character/2BlueWizardIdle/Chara - BlueIdle00001.png" type="Texture" id=79]
+[ext_resource path="res://Assets/Character/2BlueWizardIdle/Chara - BlueIdle00014.png" type="Texture" id=80]
+[ext_resource path="res://Assets/Character/2BlueWizardIdle/Chara - BlueIdle00015.png" type="Texture" id=81]
+[ext_resource path="res://Assets/Character/2BlueWizardIdle/Chara - BlueIdle00005.png" type="Texture" id=82]
+[ext_resource path="res://Assets/Character/2BlueWizardIdle/Chara - BlueIdle00010.png" type="Texture" id=83]
+[ext_resource path="res://Assets/Character/2BlueWizardIdle/Chara - BlueIdle00000.png" type="Texture" id=84]
+[ext_resource path="res://Assets/Character/2BlueWizardIdle/Chara - BlueIdle00007.png" type="Texture" id=85]
+[ext_resource path="res://Assets/Character/2BlueWizardIdle/Chara - BlueIdle00016.png" type="Texture" id=86]
+[ext_resource path="res://Assets/Character/2BlueWizardJump/CharaWizardJump_00000.png" type="Texture" id=87]
+[ext_resource path="res://Assets/Character/2BlueWizardJump/CharaWizardJump_00001.png" type="Texture" id=88]
+[ext_resource path="res://Assets/Character/2BlueWizardJump/CharaWizardJump_00003.png" type="Texture" id=89]
+[ext_resource path="res://Assets/Character/2BlueWizardJump/CharaWizardJump_00004.png" type="Texture" id=90]
+[ext_resource path="res://Assets/Character/2BlueWizardIdle/Chara - BlueIdle00012.png" type="Texture" id=91]
+[ext_resource path="res://Assets/Character/2BlueWizardJump/CharaWizardJump_00006.png" type="Texture" id=92]
+[ext_resource path="res://Assets/Character/2BlueWizardJump/CharaWizardJump_00007.png" type="Texture" id=93]
+[ext_resource path="res://Assets/Character/2BlueWizardJump/DashEffect/BlueWizardDash_00001.png" type="Texture" id=94]
+[ext_resource path="res://Assets/Character/2BlueWizardJump/DashEffect/BlueWizardDash_00003.png" type="Texture" id=95]
+[ext_resource path="res://Assets/Character/2BlueWizardJump/DashEffect/BlueWizardDash_00002.png" type="Texture" id=96]
+[ext_resource path="res://Assets/Character/2BlueWizardJump/DashEffect/BlueWizardDash_00000.png" type="Texture" id=97]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 12 ), ExtResource( 42 ), ExtResource( 36 ), ExtResource( 47 ), ExtResource( 35 ), ExtResource( 48 ), ExtResource( 30 ), ExtResource( 3 ), ExtResource( 49 ), ExtResource( 40 ), ExtResource( 44 ), ExtResource( 18 ), ExtResource( 25 ), ExtResource( 50 ), ExtResource( 6 ), ExtResource( 19 ) ],
+"loop": true,
+"name": "Dash3",
+"speed": 30.0
+}, {
+"frames": [ ExtResource( 87 ), ExtResource( 88 ), ExtResource( 66 ), ExtResource( 89 ), ExtResource( 90 ), ExtResource( 67 ), ExtResource( 92 ), ExtResource( 93 ) ],
+"loop": true,
+"name": "Jump",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 53 ), ExtResource( 14 ), ExtResource( 13 ), ExtResource( 51 ), ExtResource( 37 ), ExtResource( 32 ), ExtResource( 16 ), ExtResource( 15 ), ExtResource( 28 ), ExtResource( 17 ), ExtResource( 29 ), ExtResource( 2 ), ExtResource( 5 ), ExtResource( 1 ), ExtResource( 38 ), ExtResource( 39 ) ],
+"loop": true,
+"name": "Dash2",
+"speed": 30.0
+}, {
+"frames": [ ExtResource( 84 ), ExtResource( 79 ), ExtResource( 69 ), ExtResource( 73 ), ExtResource( 70 ), ExtResource( 82 ), ExtResource( 68 ), ExtResource( 85 ), ExtResource( 72 ), ExtResource( 71 ), ExtResource( 83 ), ExtResource( 74 ), ExtResource( 91 ), ExtResource( 75 ), ExtResource( 80 ), ExtResource( 81 ), ExtResource( 86 ), ExtResource( 76 ), ExtResource( 77 ), ExtResource( 78 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 45 ), ExtResource( 21 ), ExtResource( 10 ), ExtResource( 26 ), ExtResource( 22 ), ExtResource( 41 ), ExtResource( 20 ), ExtResource( 23 ), ExtResource( 52 ), ExtResource( 24 ), ExtResource( 34 ), ExtResource( 46 ), ExtResource( 43 ), ExtResource( 4 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 27 ), ExtResource( 31 ), ExtResource( 33 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "Walk",
+"speed": 35.0
+}, {
+"frames": [ ExtResource( 97 ), ExtResource( 94 ), ExtResource( 96 ), ExtResource( 95 ), ExtResource( 62 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 60 ), ExtResource( 61 ), ExtResource( 54 ), ExtResource( 55 ), ExtResource( 56 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 59 ) ],
+"loop": true,
+"name": "Dash1",
+"speed": 30.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 47.6791, 105.852 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+script = ExtResource( 7 )
+JUMP_SPEED = 1750.0
+
+[node name="Sprite" type="AnimatedSprite" parent="KinematicBody2D"]
+frames = SubResource( 1 )
+animation = "Idle"
+frame = 19
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
+position = Vector2( 0.53878, 39.4832 )
+shape = SubResource( 2 )
+
+[node name="Camera2D" type="Camera2D" parent="KinematicBody2D"]
+current = true
+drag_margin_left = 0.3
+drag_margin_right = 0.3
+
+[node name="DuringDashTimer" type="Timer" parent="KinematicBody2D"]
+wait_time = 0.5
+one_shot = true
+
+[node name="DashTimer" type="Timer" parent="KinematicBody2D"]
+wait_time = 1.5
+one_shot = true
+
+[node name="LookTimer" type="Timer" parent="KinematicBody2D"]
+one_shot = true
+[connection signal="animation_finished" from="KinematicBody2D/Sprite" to="KinematicBody2D" method="_on_Sprite_animation_finished"]
+[connection signal="timeout" from="KinematicBody2D/DuringDashTimer" to="KinematicBody2D" method="_on_DuringDashTimer_timeout"]
+[connection signal="timeout" from="KinematicBody2D/DashTimer" to="KinematicBody2D" method="_on_DashTimer_timeout"]
+[connection signal="timeout" from="KinematicBody2D/LookTimer" to="KinematicBody2D" method="_on_LookTimer_timeout"]
